@@ -1,4 +1,4 @@
-/* Basic page style */
+/* ===== Basic page style ===== */
 body {
     font: 100%/1.5 system-ui;
 
@@ -7,6 +7,12 @@ body {
     padding: 1em;
 }
 
+/* ===== Accent color ===== */
+:root {
+    --color-accent: oklch(65% 50% 0);
+}
+
+/* ===== Navigation bar ===== */
 nav {
     display: flex;
     margin-bottom: 1em;
@@ -21,10 +27,71 @@ nav a {
     color: inherit;
 }
 
-:root {
-    --color-accent: oklch(65% 50% 0);
-}
-
+/* Hover effect */
 nav a:hover {
     border-bottom: 0.4em solid var(--color-accent);
+}
+
+/* Current page (IMPORTANT for Lab 2) */
+nav a.current {
+    border-bottom: 0.4em solid oklch(80% 3% 200);
+    padding-bottom: 0.1em;
+}
+
+/* ===== Contact form styling ===== */
+
+/* Make form use same font */
+input,
+textarea,
+button {
+    font: inherit;
+}
+
+/* Stack labels */
+label {
+    display: block;
+    margin-block: 1em;
+}
+
+/* Full width inputs */
+input,
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Make textarea bigger */
+textarea {
+    min-height: 6em;
+}
+
+/* ===== Projects grid ===== */
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+    gap: 1em;
+}
+
+/* Each project card */
+.projects article {
+    display: grid;
+    gap: 0.5em;
+}
+
+/* Make images fit nicely */
+.projects img {
+    max-width: 100%;
+}
+
+/* ===== Typography ===== */
+
+/* Bigger main title */
+h1 {
+    font-size: 300%;
+}
+
+/* Better spacing for headings */
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.1;
 }
