@@ -1,0 +1,122 @@
+[
+    {
+        "title": "Portfolio Website",
+        "year": "2026",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Personal portfolio website using HTML, CSS, and JavaScript."
+    },
+    {
+        "title": "DSC Project Example 1",
+        "year": "2026",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Interactive visualization project using D3.js."
+    },
+    {
+        "title": "DSC Project Example 2",
+        "year": "2026",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Created charts and graphs for class assignments."
+    },
+    {
+        "title": "Machine Learning Homework",
+        "year": "2025",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Implemented machine learning models in Python."
+    },
+    {
+        "title": "DSC Project Example 3",
+        "year": "2025",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Analyzed data using statistical methods."
+    },
+    {
+        "title": "SQL Database Project",
+        "year": "2025",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Worked with relational databases and SQL queries."
+    },
+    {
+        "title": "DSC Project Example 4",
+        "year": "2025",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Visualization project with interactive filtering."
+    },
+    {
+        "title": "Gradient Descent Assignment",
+        "year": "2024",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Studied optimization and gradient descent."
+    },
+    {
+        "title": "DSC Project Example 5",
+        "year": "2024",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Built regression models and analyzed trends."
+    },
+    {
+        "title": "Linear Regression Project",
+        "year": "2024",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Created predictive models for datasets."
+    },
+    {
+        "title": "DSC Project Example 6",
+        "year": "2024",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Experimented with JavaScript-based interactions."
+    },
+    {
+        "title": "Python File Handling Project",
+        "year": "2023",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Worked with reading and writing files in Python."
+    },
+    {
+        "title": "DSC Project Example 7",
+        "year": "2023",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Created reusable JavaScript components."
+    },
+    {
+        "title": "Statistics Homework",
+        "year": "2023",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Solved statistical testing problems."
+    },
+    {
+        "title": "DSC Project Example 8",
+        "year": "2023",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Developed interactive webpage layouts."
+    },
+    {
+        "title": "Interview Preparation Guide",
+        "year": "2022",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Prepared interview answers and behavioral examples."
+    },
+    {
+        "title": "DSC Project Example 9",
+        "year": "2022",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Worked on frontend web design projects."
+    },
+    {
+        "title": "Workout Planner",
+        "year": "2022",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Designed a printable workout planning system."
+    },
+    {
+        "title": "DSC Project Example 10",
+        "year": "2021",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Created introductory HTML and CSS projects."
+    },
+    {
+        "title": "Vietnam History Presentation",
+        "year": "2021",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Prepared a presentation about Vietnamese dynasties."
+    }
+]

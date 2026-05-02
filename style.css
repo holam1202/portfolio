@@ -100,3 +100,86 @@ h1 {
 h1, h2, h3, h4, h5, h6 {
     line-height: 1.1;
 }
+
+/* ===== Projects Pie Chart ===== */
+
+#projects-pie-plot {
+    max-width: 20em;
+    margin-block: 2em;
+    overflow: visible;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.legend {
+    flex: 1;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+
+    gap: 1em;
+
+    border: 1px solid oklch(50% 10% 200 / 40%);
+
+    padding: 1em;
+
+    margin: 0;
+
+    list-style: none;
+}
+
+.legend li {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.swatch {
+    width: 1em;
+    aspect-ratio: 1 / 1;
+
+    background: var(--color);
+
+    border-radius: 50%;
+}
+
+.searchBar {
+    width: 100%;
+    margin-block: 1em;
+}
+
+.project-year {
+    color: gray;
+    font-style: italic;
+}
+
+/* ===== Pie chart interaction ===== */
+
+path {
+    cursor: pointer;
+    transition: 300ms;
+}
+
+svg:has(path:hover) path:not(:hover) {
+    opacity: 0.5;
+}
+
+.selected {
+    --color: oklch(60% 45% 0) !important;
+}
+
+.selected:is(path) {
+    fill: var(--color);
+}
+
+.legend li {
+    cursor: pointer;
+}
+
+.legend li.selected {
+    font-weight: bold;
+}

@@ -17,13 +17,13 @@ let pages = [
 let nav = document.createElement("nav");
 document.body.prepend(nav);
 
-// ===== Base path (IMPORTANT for GitHub Pages) =====
+// ===== Base path =====
 const BASE_PATH =
     location.hostname === "localhost" || location.hostname === "127.0.0.1"
         ? "/"
         : "/portfolio/";
 
-// ===== Build nav links =====
+// ===== Build nav =====
 for (let p of pages) {
     let url = p.url;
     let title = p.title;
@@ -34,13 +34,11 @@ for (let p of pages) {
     a.href = url;
     a.textContent = title;
 
-    // Highlight current page
     a.classList.toggle(
         "current",
         a.host === location.host && a.pathname === location.pathname
     );
 
-    // Open external links in new tab
     if (a.host !== location.host) {
         a.target = "_blank";
     }
@@ -48,7 +46,7 @@ for (let p of pages) {
     nav.append(a);
 }
 
-// ===== Dark mode switch =====
+// ===== Theme switch =====
 document.body.insertAdjacentHTML(
     "afterbegin",
     `
@@ -62,7 +60,7 @@ document.body.insertAdjacentHTML(
     </label>`
 );
 
-// ===== Handle theme change =====
+// ===== Theme change =====
 let select = document.querySelector(".color-scheme select");
 
 select.addEventListener("input", function (event) {
@@ -74,7 +72,7 @@ select.addEventListener("input", function (event) {
     localStorage.colorScheme = event.target.value;
 });
 
-// ===== Load saved preference =====
+// ===== Load saved theme =====
 if ("colorScheme" in localStorage) {
     document.documentElement.style.setProperty(
         "color-scheme",
@@ -84,10 +82,11 @@ if ("colorScheme" in localStorage) {
     select.value = localStorage.colorScheme;
 }
 
+// ===== Contact form =====
 let form = document.querySelector("form");
 
 form?.addEventListener("submit", function (event) {
-    event.preventDefault(); 
+    event.preventDefault();
 
     let data = new FormData(form);
 
@@ -96,6 +95,54 @@ form?.addEventListener("submit", function (event) {
     for (let [name, value] of data) {
         url += name + "=" + encodeURIComponent(value) + "&";
     }
+
     url = url.slice(0, -1);
+
     location.href = url;
 });
+
+// ===== Fetch JSON =====
+export async function fetchJSON(url) {
+
+    try {
+
+        const response = await fetch(url);
+
+        if (!response.ok) {
+            throw new Error(`Failed to fetch projects: ${response.statusText}`);
+        }
+
+        const data = await response.json();
+
+        return data;
+
+    } catch (error) {
+
+        console.error("Error fetching or parsing JSON data:", error);
+
+    }
+}
+
+// ===== Render Projects =====
+export function renderProjects(
+    projects,
+    containerElement,
+    headingLevel = "h2"
+) {
+
+    containerElement.innerHTML = "";
+
+    for (let project of projects) {
+
+        const article = document.createElement("article");
+
+        article.innerHTML = `
+            <${headingLevel}>${project.title}</${headingLevel}>
+            <img src="${project.image}" alt="${project.title}">
+            <p>${project.description}</p>
+            <p class="project-year">${project.year}</p>
+        `;
+
+        containerElement.appendChild(article);
+    }
+}
